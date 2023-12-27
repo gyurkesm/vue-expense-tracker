@@ -35,6 +35,7 @@ const amount = ref("");
 const onSubmit = () => {
   if (!text.value || !amount.value) {
     toast.error("Both fields must be filled");
+    return;
   }
   const transactionData = {
     text: text.value,
